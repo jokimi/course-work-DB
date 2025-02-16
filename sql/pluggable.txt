@@ -1,0 +1,7 @@
+dbca -silent -createPluggableDatabase -createAsClone true -pdbName PodSproutPDB -createListener true -datafileDestination '/oradata/PodSproutPDB' -sid 'PodSprout' -pdbAdminPassword 'podsproutpdb' -sourceDB 'ORCLCDB'
+
+docker exec -it oraora21 bash
+alter session set container=PodSproutPDB;
+ALTER PLUGGABLE DATABASE PodSproutPDB OPEN;
+
+SELECT OBJECT_NAME FROM ALL_PROCEDURES WHERE OBJECT_NAME like 'LOGINUSER' AND OWNER = 'SYS'

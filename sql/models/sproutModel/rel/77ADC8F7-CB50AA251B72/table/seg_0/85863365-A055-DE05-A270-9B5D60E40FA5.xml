@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85863365-A055-DE05-A270-9B5D60E40FA5" name="podcasts_t">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>86C65E40-4D9F-A92E-20C9-A3BEB4C00EEC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="podcast_id" id="6C30946D-AFC1-AFCB-824D-2356B7A01550">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>A63E6296-F3FB-6CA8-360B-C0146A413A89</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="podcast_narrator" id="C494CB5E-69D5-7827-A81E-096CBCD6AEF9">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>8A0C1AE6-2BB9-48AD-ECA3-B4AFC1A68530</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6E82098-7888-D03D-C80D-202D39AF7DE7" referredColumn="4098A9EF-1200-F79D-E05A-6EBF69731E53"/>
+</associations>
+</Column>
+<Column name="podcast_topic" id="372F53E6-C345-C94D-5583-57B40441CDD2">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>B6439ECC-6448-E2A8-4A6B-DC4C224329D7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C1AD49B-EE33-4177-8821-4027651BD9A8" referredColumn="9E4F9FF0-86DC-697E-0FF1-091DF00F87B0"/>
+</associations>
+</Column>
+<Column name="podcast_name" id="2B4BA74E-17D1-F869-7254-5ED8BD9F286F">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>BFD7CB68-72BF-95BD-1CB4-F83253EFA1C6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>13ABCA9B-547A-C8B4-6880-E648DE84B049</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="podcast_blob" id="68F02391-06CB-5C38-1F29-6D28DD0E0763">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>FED796B2-6BB5-8CD6-A0C1-071840662AFE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<domain>2F2D42DE-FE39-BDF6-39FA-9E47BED44740</domain>
+<defaultValue>EMPTY_BLOB()</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF708500-7010-E1E3-3646-F766B925A352" name="podcast_pk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>2430D0D6-0C6B-A38C-EF22-BBB4A0EEF1FE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C30946D-AFC1-AFCB-824D-2356B7A01550"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="64EA2B39-C541-CA2B-6610-4EB98A86BEB2" name="podcast_narrator_fk">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C494CB5E-69D5-7827-A81E-096CBCD6AEF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9267D37-663D-2586-4433-9411257CA10D" name="podcast_topic_fk">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="372F53E6-C345-C94D-5583-57B40441CDD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

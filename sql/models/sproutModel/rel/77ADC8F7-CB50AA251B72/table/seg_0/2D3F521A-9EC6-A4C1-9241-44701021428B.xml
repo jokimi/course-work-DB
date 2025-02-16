@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D3F521A-9EC6-A4C1-9241-44701021428B" name="saved_t">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>8CEC0664-4C35-6D4E-2151-D1E679349135</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="saved_id" id="439850B2-9787-F6F0-B265-ABBF4247DB0F">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>BEB936B8-C306-8B35-4B64-249EDEA2C61D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="saved_user" id="54857E97-ACAE-9A37-2AD0-DFBA4B365E8B">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>B0A00B47-4510-4AE8-E68F-57CA1BDB9756</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D1A8AE5-E2CB-1925-92CF-84CC3763A43C" referredColumn="00CC9F86-3F08-9637-3B83-C1DF17FC6469"/>
+</associations>
+</Column>
+<Column name="saved_podcast" id="5C0121EE-4BEA-8E28-9572-3DBC4C27BFD5">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>2F5A7FB3-B4FA-5576-7941-C185B0CCBAD4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD712D89-E57B-3D53-82C4-C36BECE31009" referredColumn="6C30946D-AFC1-AFCB-824D-2356B7A01550"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69E3BB25-9B2A-335C-95B5-5E1A0748DB47" name="saved_pk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>F0D98635-D976-F378-0461-9C150BFAA7E8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="439850B2-9787-F6F0-B265-ABBF4247DB0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF99FF60-A9CD-4D47-E016-6A4A984CE8FE" name="saved_podcast_fk">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C0121EE-4BEA-8E28-9572-3DBC4C27BFD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EA4CC00-3CD6-0DD6-614D-C774EBB29BDB" name="saved_user_fk">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54857E97-ACAE-9A37-2AD0-DFBA4B365E8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

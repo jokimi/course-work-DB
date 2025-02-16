@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AD712D89-E57B-3D53-82C4-C36BECE31009" containerWithKeyObject="2D3F521A-9EC6-A4C1-9241-44701021428B" localFKIndex="BF99FF60-A9CD-4D47-E016-6A4A984CE8FE" name="saved_podcast_fk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>162A9A61-27F5-349C-3F5F-D973E2509B2F</importedID>
+<referredTableLongName>podcasts_t</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>85863365-A055-DE05-A270-9B5D60E40FA5</referredTableID>
+<keyObject>DF708500-7010-E1E3-3646-F766B925A352</keyObject>
+<referredKeyID>DF708500-7010-E1E3-3646-F766B925A352</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>podcast_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

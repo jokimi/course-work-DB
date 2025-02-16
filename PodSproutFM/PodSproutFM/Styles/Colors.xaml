@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="OffWhite" >#d9e4d5</Color>
+    <SolidColorBrush x:Key="OffWhiteBrush" Color="{StaticResource OffWhite}"/>
+    
+    <Color x:Key="Silver" >#A7A2A9</Color>
+    <SolidColorBrush x:Key="SilverBrush" Color="{StaticResource Silver}"/>
+
+    <Color x:Key="Platinum" >#ebebeb</Color>
+    <SolidColorBrush x:Key="PlatinumBrush" Color="{StaticResource Platinum}"/>
+
+    <Color x:Key="Grey" >#5B626A</Color>
+    <SolidColorBrush x:Key="GreyBrush" Color="{StaticResource Grey}"/>
+
+    <Color x:Key="OffBlack" >#011627</Color>
+    <SolidColorBrush x:Key="OffBlackBrush" Color="{StaticResource OffBlack}"/>
+
+    <Color x:Key="Teal" >#97b38b</Color>
+    <SolidColorBrush x:Key="TealBrush" Color="{StaticResource Teal}"/>
+
+    <Color x:Key="TealPressed" >#2bb6a8</Color>
+    <SolidColorBrush x:Key="TealPressedBrush" Color="{StaticResource TealPressed}"/>
+
+    <Color x:Key="LightPurple" >#6d8960</Color>
+    <SolidColorBrush x:Key="LightPurpleBrush" Color="{StaticResource LightPurple}"/>
+    
+    <Color x:Key="Yellow" >#ffc857</Color>
+    <SolidColorBrush x:Key="YellowBrush" Color="{StaticResource Yellow}"/>
+
+    <Color x:Key="LightPurplePressed" >#7369D8</Color>
+    <SolidColorBrush x:Key="LightPurplePressedBrush" Color="{StaticResource LightPurplePressed}"/>
+
+    <Color x:Key="RedCrayola" >#ff1053</Color>
+    <SolidColorBrush x:Key="RedCrayolaBrush" Color="{StaticResource RedCrayola}"/>
+</ResourceDictionary>

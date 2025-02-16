@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E6E82098-7888-D03D-C80D-202D39AF7DE7" containerWithKeyObject="85863365-A055-DE05-A270-9B5D60E40FA5" localFKIndex="64EA2B39-C541-CA2B-6610-4EB98A86BEB2" name="podcast_narrator_fk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>E1C00D70-2F8A-4D44-B0B7-02941D2DAC96</importedID>
+<referredTableLongName>narrators_t</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FD60C879-00C5-AB9D-99AE-F600B4AF33EE</referredTableID>
+<keyObject>B96E1A79-81E3-8CC0-894F-E49254A4B8B3</keyObject>
+<referredKeyID>B96E1A79-81E3-8CC0-894F-E49254A4B8B3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>narrator_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

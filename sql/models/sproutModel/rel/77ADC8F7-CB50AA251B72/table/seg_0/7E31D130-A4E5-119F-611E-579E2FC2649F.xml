@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E31D130-A4E5-119F-611E-579E2FC2649F" name="users_t">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>27850E58-FA5C-505E-D374-3E610D0716FC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="user_id" id="00CC9F86-3F08-9637-3B83-C1DF17FC6469">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>FB087954-697B-EEF5-F49B-CCA830EDD4AD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="user_login" id="EB259C54-8FCC-B11B-75FD-103F563D5D57">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>6B55F374-84C1-F259-CF3A-3643E04A4971</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>13ABCA9B-547A-C8B4-6880-E648DE84B049</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_password" id="2C134040-9DC0-78E4-3B23-9C1C0DDDC96E">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>B885DEE8-CA89-6E27-8829-E0916942B3C8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2C263D5C-DFC0-235E-BD5F-2E8956F88A38</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_role" id="1F582EB0-34DE-4E98-9B80-A66A4F2331FC">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>A506DF65-E7A5-D74C-51E9-440272A9167D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B578CF3-90C7-8938-A358-8C6DA4173945</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F4B4DC9-AB89-2B67-BB05-AD8A920FE71F" referredColumn="18309CA1-1E05-1D86-9D92-8455419C53BF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75944AFA-E5E3-8F84-7CE3-83DC152715F8" name="user_pk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>F580350E-9A63-29DF-22C7-61E486C43352</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00CC9F86-3F08-9637-3B83-C1DF17FC6469"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F877AA6-FF27-4571-D176-0FB02439257D" name="user_role_fk">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F582EB0-34DE-4E98-9B80-A66A4F2331FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

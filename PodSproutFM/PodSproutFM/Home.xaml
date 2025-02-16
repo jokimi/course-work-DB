@@ -1,0 +1,205 @@
+﻿<Page x:Class="PodSproutFM.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PodSproutFM"
+      xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="Home"
+      Loaded="Page_Loaded">
+    <Grid>
+        <Grid>
+            <dragablz:TabablzControl x:Name="tabControl" FontSize="{StaticResource FontSizeRegular}" Background="Transparent" Margin="0 -3 0 0">
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem x:Name="Narrators" Visibility="Visible" Background="Transparent">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="60" Width="200" Margin="-6 -3" Background="#6d8960">
+                            <Image Source="./Images/narrators.jpg" Width="60" Height="60" Margin="20 0 0 0"/>
+                            <TextBlock Text="Дикторы" Background="#6d8960" Foreground="White" FontFamily="Architun" HorizontalAlignment="Right" Width="Auto" FontSize="24" Height="60" Margin="0 17 0 17"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid x:Name="NarratorsGrid" Visibility="{Binding Path=Visibility, ElementName=characterItem}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2" Background="#6d8960">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Найти диктора: " Style="{StaticResource CommonText}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <TextBox x:Name="searchBarNarrator" Grid.Column="1" Width="Auto" VerticalAlignment="Center" Style="{StaticResource CommonTextBox}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <Button x:Name="searchButtonNarrators" Grid.Column="2" Content="Поиск" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource WhiteCommonButton}" Margin="10 5" Padding="20 0" Click="SearchButtonNarrators_Click"/>
+                            </Grid>
+                            <ScrollViewer Grid.Row="0" Name="narratorsScrollView" Background="{x:Null}" CanContentScroll="True">
+                                <StackPanel x:Name="narratorList" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                            </ScrollViewer>
+                            <Grid Background="#6d8960" Height="Auto" Grid.Row="1">
+                                <Button Name="addNewNarratorButton" Content="Добавить диктора" Width="Auto" HorizontalAlignment="Center" IsEnabled="True" Style="{StaticResource WhiteCommonButton}" Visibility="Collapsed" Click="AddNewNarratorButton_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="Topics" Visibility="Visible">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="60" Width="200" Margin="-6 -3" Background="#a5b586">
+                            <Image Source="./Images/topics.jpg" Width="60" Height="60" Margin="41 0 0 0"/>
+                            <TextBlock Text="Темы" Background="#a5b586" Foreground="White" FontFamily="Architun" HorizontalAlignment="Right" Width="Auto" FontSize="24" Height="60" Margin="0 17 0 17"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid x:Name="TopicsGrid" Visibility="{Binding Path=Visibility, ElementName=statItem}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2" Background="#6d8960">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Найти тему: " Style="{StaticResource CommonText}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <TextBox x:Name="searchBarTopics" Grid.Column="1" Width="Auto" VerticalAlignment="Center" Style="{StaticResource CommonTextBox}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <Button x:Name="searchButtonTopics" Grid.Column="2" Content="Поиск" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource WhiteCommonButton}" Margin="10 5" Padding="20 0" Click="SearchButtonTopics_Click" />
+                            </Grid>
+                            <ScrollViewer Grid.Row="0" Name="topicsScrollView" Background="{x:Null}" CanContentScroll="True">
+                                <StackPanel x:Name="topicList" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                            </ScrollViewer>
+                            <Grid Background="#6d8960" Height="Auto" Grid.Row="1">
+                                <Button Name="addNewTopicButton" Content="Добавить тему" HorizontalAlignment="Center" IsEnabled="True" Style="{StaticResource WhiteCommonButton}" Visibility="Collapsed" Click="AddNewTopicButton_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="Podcasts" Visibility="Visible">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="60" Width="200" Margin="-6 -3" Background="#6d8960">
+                            <Image Source="./Images/podcasts.jpg" Width="60" Height="60" Margin="17 0 0 0"/>
+                            <TextBlock Text="Подкасты" Background="#6d8960" Foreground="White" FontFamily="Architun" HorizontalAlignment="Right" Width="Auto" FontSize="24" Height="60" Margin="0 17 0 17"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid x:Name="PodcastsGrid" Visibility="{Binding Path=Visibility, ElementName=statItem}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2" Background="#6d8960">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Найти подкаст: " Style="{StaticResource CommonText}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <TextBox x:Name="searchBarPodcasts" Grid.Column="1" Width="Auto" VerticalAlignment="Center" Style="{StaticResource CommonTextBox}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <Button x:Name="searchButtonPodcasts" Grid.Column="2" Content="Поиск" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource WhiteCommonButton}" Margin="10 5" Padding="20 0" Click="SearchButtonPodcasts_Click" />
+                            </Grid>
+                            <ScrollViewer Grid.Row="0" Name="podcastScrollView" Background="{x:Null}" CanContentScroll="True">
+                                <StackPanel x:Name="podcastList" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                            </ScrollViewer>
+                            <Grid Background="#6d8960" Height="Auto" Grid.Row="1">
+                                <Button Name="addNewPodcastButton" Content="Добавить подкаст" HorizontalAlignment="Center" IsEnabled="True" Style="{StaticResource WhiteCommonButton}" Visibility="Collapsed" Click="AddNewPodcastButton_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="playlistItem" Visibility="Visible">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="60" Width="200" Margin="-6 -3" Background="#a5b586">
+                            <Image Source="./Images/saved.jpg" Width="60" Height="60" Margin="16 0 0 0"/>
+                            <TextBlock Text="Избранное" Background="#a5b586" Foreground="White" FontFamily="Architun" HorizontalAlignment="Right" Width="Auto" FontSize="24" Height="60" Margin="0 17 0 17"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid x:Name="PlaylistGrid" Visibility="{Binding Path=Visibility, ElementName=statItem}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2" Background="#6d8960">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Найти подкаст в избранном: " Style="{StaticResource CommonText}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <TextBox x:Name="searchBarPlaylist" Grid.Column="1" Width="Auto" VerticalAlignment="Center" Style="{StaticResource CommonTextBox}" FontSize="{StaticResource FontSizeRegular}"/>
+                                <Button x:Name="searchButtonPlaylist" Grid.Column="2" Content="Поиск" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource WhiteCommonButton}" Margin="10 5" Padding="20 0" Click="SearchButtonPlaylist_Click"/>
+                            </Grid>
+                            <ScrollViewer Grid.Row="0" Name="playlistScrollView" Background="{x:Null}" CanContentScroll="True">
+                                <StackPanel x:Name="playlistList" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                            </ScrollViewer>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="settingsItem" Visibility="Visible">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="60" Width="200" Margin="-6 -3" Background="#6d8960">
+                            <Image Source="./Images/settings.jpg" Width="60" Height="60" Margin="15 0 0 0"/>
+                            <TextBlock Text="Настройки" Background="#6d8960" Foreground="White" FontFamily="Architun" HorizontalAlignment="Right" Width="Auto" FontSize="24" Height="60" Margin="0 17 0 17"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid x:Name="SettingsGrid" Visibility="{Binding Path=Visibility, ElementName=settingItem}">
+                        <Border Grid.Row="0" Margin="10" CornerRadius="10" Background="{StaticResource OffWhiteBrush}">
+                            <ScrollViewer Name="settingScrollView" Background="{x:Null}" CanContentScroll="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <Grid Margin="20 10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Name="backSettingButton" Content="Выйти из аккаунта" HorizontalAlignment="Center" Click="BackSettingClick"/>
+                                    <Grid Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" x:Name="settingLogin" Text="Логин:" VerticalAlignment="Center" FontFamily="Architun" Margin="0 0 0 0"/>
+                                        <TextBox Grid.Column="1" x:Name="settingUserLogin" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" MaxLength="30" Width="450" Margin="-40 0 10 0"/>
+                                        <Button Grid.Column="2" Name="settingChangeLoginButton" Content="Изменить" Click="ChangeLoginClick" IsEnabled="True" Margin="10 10 0 10"/>
+                                        <Button Grid.Column="3" Name="settingUpdateLoginButton" Content="Сохранить" Click="UpdateLoginClick" IsEnabled="False" Margin="10 10 0 10"/>
+                                        <Button Grid.Column="4" Name="settingCancelLoginButton" Content="Отмена" Click="CancelLoginClick" IsEnabled="False" Margin="10 10 0 10"/>
+                                    </Grid>
+                                    <Grid Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" x:Name="settingPassword" Text="Пароль:" VerticalAlignment="Center" FontFamily="Architun"/>
+                                        <TextBox Grid.Column="1" x:Name="settingUserPassword" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="444" IsReadOnly="True" MaxLength="30" Margin="-35 0 10 0"/>
+                                        <Button Grid.Column="2" Name="settingChangePasswordButton" Content="Изменить" Click="ChangePasswordClick" IsEnabled="True" Margin="10 10 0 10"/>
+                                        <Button Grid.Column="3" Name="settingUpdatePasswordButton" Content="Сохранить" Click="UpdatePasswordClick" IsEnabled="False" Margin="10 10 0 10"/>
+                                        <Button Grid.Column="4" Name="settingCancelPasswordButton" Content="Отмена" Click="CancelPasswordClick" IsEnabled="False" Margin="10 10 0 10"/>
+                                    </Grid>
+                                    <Button Grid.Row="3" Name="deleteUserButton" Content="Удалить аккаунт" Click="DeleteUserClick" IsEnabled="True" HorizontalAlignment="Center"/>
+                                    <Button Grid.Row="4" Name="tableControlButton" Content="Открыть окно администратора" HorizontalAlignment="Center" IsEnabled="True" Visibility="Collapsed"  Click="TableControlButton_Click"/>
+                                </Grid>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </TabItem>
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="E2CD36D2-BAF1-4E52-D428-F07D45A60007" mainViewID="17B40244-C4D4-94E2-C414-9F62FA3C85A1">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:41:45 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

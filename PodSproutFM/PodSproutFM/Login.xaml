@@ -1,0 +1,28 @@
+﻿<Page x:Class="PodSproutFM.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PodSproutFM"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="Login">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel VerticalAlignment="Center" Panel.ZIndex="1" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
+                <Border Background="#fcf0d6" Padding="20 30 20 30" Margin="50 15" CornerRadius="10" Width="250" Height="342" Panel.ZIndex="1">
+                    <StackPanel Panel.ZIndex="1">
+                        <TextBlock FontSize="{StaticResource FontSizeLarge}" FontFamily="Architun" Foreground="{StaticResource LightPurpleBrush}" Text="Авторизация" Margin="0 0 0 20"/>
+                        <TextBlock Text="Логин:" FontFamily="Architun" Foreground="{StaticResource GreyBrush}" FontSize="{StaticResource FontSizeSmall}" Panel.ZIndex="1"/>
+                        <TextBox x:Name="userLogin" Panel.ZIndex="1"/>
+                        <TextBlock Text="Пароль:" FontFamily="Architun" Foreground="{StaticResource GreyBrush}" FontSize="{StaticResource FontSizeSmall}" Margin="0 5 0 0" Panel.ZIndex="1"/>
+                        <PasswordBox x:Name="userPassword" Margin="0 0 0 20" Panel.ZIndex="1"/>
+                        <Button x:Name="btnLogin" Content="Войти" HorizontalAlignment="Center" Command="{Binding AuthorizeCommand}" CommandParameter="Home" Click="BtnLogin_Click" Panel.ZIndex="1"/>
+                        <Button x:Name="btnToRegistration" Content="У меня еще нет аккаунта" Style="{StaticResource TextButton}" Click="BtnToRegistration_Click" Panel.ZIndex="2" Padding="0" Height="40"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

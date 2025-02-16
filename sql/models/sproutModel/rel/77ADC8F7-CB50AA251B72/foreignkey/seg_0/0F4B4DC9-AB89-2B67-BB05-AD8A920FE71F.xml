@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0F4B4DC9-AB89-2B67-BB05-AD8A920FE71F" containerWithKeyObject="7E31D130-A4E5-119F-611E-579E2FC2649F" localFKIndex="1F877AA6-FF27-4571-D176-0FB02439257D" name="user_role_fk">
+<sourceDDLFile>createTables.sql</sourceDDLFile>
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:42:29 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<importedID>DFCD34B4-8D39-443A-2829-F5C3DA93FD66</importedID>
+<referredTableLongName>roles_t</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FFFAD57A-3290-F810-71AF-7A5AC6872F03</referredTableID>
+<keyObject>2F8B7AEE-02AF-896F-2AC3-B8C1ABA2FB0F</keyObject>
+<referredKeyID>2F8B7AEE-02AF-896F-2AC3-B8C1ABA2FB0F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>role_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="sproutModel" id="893FD232-A01F-9340-9DAC-FC6C4E5C4DB8" version="3.5">
+<createdBy>Admin</createdBy>
+<createdTime>2024-10-29 07:41:45 UTC</createdTime>
+<ownerDesignName>sproutModel</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>893FD232-A01F-9340-9DAC-FC6C4E5C4DB8</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="96F72867-85C0-97F4-8E27-2DAD049B69B8">
+<designStoragePath>D:\createTables</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
